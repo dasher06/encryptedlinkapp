@@ -17,6 +17,7 @@ def decrypt_link():
             decrypted = cipher_suite.decrypt(encrypted.encode()).decode()
         except Exception as e:
             error = f"Decryption error: {str(e)}"
+            print("Decryption error:", e)
 
     return render_template('decrypt_link.html', encrypted=encrypted, decrypted=decrypted, error=error)
 
